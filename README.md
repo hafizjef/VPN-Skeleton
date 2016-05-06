@@ -72,6 +72,6 @@ cp /etc/openvpn/easy-rsa/keys/{server.crt,server.key,ca.crt} /etc/openvpn
 - Add & save iptables rules
 
 ```bash
-# iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
-# iptables-save > /etc/network/iptables.rules
+iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
+iptables-save > /etc/network/iptables.rules
 ```
